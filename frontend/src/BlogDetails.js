@@ -4,10 +4,10 @@ import useFetch from "./useFetch";
 const BlogDetails = () => {
 
     const { id } = useParams();
-    const [blog, isPending, error] = useFetch(`http://localhost:8000/blogs/${id}`);
+    const [blog, isPending, error] = useFetch(`https://thetimes.onrender.com/blogs/${id}`);
     const history = useHistory();
     const handleDelete = () => {
-        fetch(`http://localhost:8000/blogs/${blog.id}`, {
+        fetch(`https://thetimes.onrender.com/blogs/${blog.id}`, {
             method: "DELETE"
         }).then(() => {
             history.push("/");

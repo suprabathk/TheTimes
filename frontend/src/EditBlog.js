@@ -10,7 +10,7 @@ const EditBlog = () => {
     const history = useHistory();
     const { id } = useParams();
 
-    const [blog, isBlogPending, error] = useFetch(`http://localhost:8000/blogs/${id}`);
+    const [blog, isBlogPending, error] = useFetch(`https://thetimes.onrender.com/blogs/${id}`);
 
     useEffect(() => {
         if (blog) {
@@ -25,7 +25,7 @@ const EditBlog = () => {
         e.preventDefault();
         const blog = { title, body, author };
         setIsPending(true);
-        fetch(`http://localhost:8000/blogs/${id}`, {
+        fetch(`https://thetimes.onrender.com/blogs/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog)

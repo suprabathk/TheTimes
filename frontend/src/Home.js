@@ -3,7 +3,7 @@ import useFetch from "./useFetch";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-    const [blogs, isPending, error] = useFetch("http://localhost:8000/blogs");
+    const [blogs, isPending, error] = useFetch("https://thetimes.onrender.com/blogs");
 
     return (
         <div className="home text-white">
